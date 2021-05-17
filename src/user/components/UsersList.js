@@ -1,14 +1,19 @@
+//3rd party imports
 import React from 'react';
-
+//own file imports
+import UserItem from './UserItem';
+import Card from '../../shared/components/UIElements/Card';
 import './UsersList.css';
 
-import UserItem from './UserItem';
+
 
 const UsersList = props => { //for parent props
     if (props.items.length === 0){ //item name for the prop
         return (
             <div className="center">
-                <h2>No users found</h2>
+                <Card>
+                    <h2>No users found</h2>
+                </Card>
             </div>
         );
     }
