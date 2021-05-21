@@ -12,7 +12,7 @@ const SideDrawer = props => {
         classNames="slide-in-left" 
         mountOnEnter 
         unmountOnExit>
-            <aside className="side-drawer">{props.children}</aside></CSSTransition>
+            <aside className="side-drawer" onClick={props.onClick}>{props.children}</aside></CSSTransition>
 
     //which content render where
     return ReactDOM.createPortal(content, document.getElementById('drawer-hook'));
