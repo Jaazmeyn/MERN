@@ -1,8 +1,12 @@
 const MongoClient = require('mongodb').MongoClient;
 //   const url = 'mongodb+srv://jasmin:f%MQfNfu*euej8hp@cluster0-g8eu9.mongodb.net/products_test?retryWrites=true&w=majority';
 // const url = 'mongodb+srv://jasminblanda:K$pIoC3yL5$*8kWj@cluster0.ppqvvrj.mongodb.net/'
-const url = 'mongodb+srv://jasminblanda:K$pIoC3yL5$*8kWj@cluster0.ppqvvrj.mongodb.net/products_test?retryWrites=true&w=majority&appName=Cluster0';
-// `mongodb+srv://jasmin:f%MQfNfu*euej8hp@cluster0.ppqvvrj.mongodb.net/places_test?retryWrites=true&w=majority&appName=Cluster0`;
+
+const password = process.env.password;
+
+const url = `mongodb+srv://jasmin:${password}@cluster0.ppqvvrj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+//const url = `mongodb+srv://jasminblanda:CE@^5vZb!GpA1KTo@cluster0.ppqvvrj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+
 
 const createProduct = async (req, res, next) => {
     const newProduct = {
