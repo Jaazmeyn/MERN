@@ -25,7 +25,7 @@ const DUMMY_PLACES = [
             lat: 48.2133462,
             long: 16.4343926
         },
-        creator: 'u2'
+        creator: 'u1'
     }
 ]
 const UserPlaces = () => {
